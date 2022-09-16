@@ -37,7 +37,7 @@ import TodoOption from "../components/TodoOption.vue";
 				this.todoList.splice(index, 1);
 			}
         }
-    },  
+    }
 }
 </script>
 
@@ -45,12 +45,12 @@ import TodoOption from "../components/TodoOption.vue";
 	<div id="app" class="app-options">
 		<h2>Simples Todo - Vuejs</h2>
 		<div class="options-api__input">
-			<input id="add-input" v-model="todoText" 
+			<input id="add-input" 
+				v-model="todoText" 
 				@keyup.enter.prevent="addTodo" 
 				placeholder="O que vai fazer?" />
 		</div>
 		<TodoOption :itemList="todoList" 
-			:delete="deleteTodo" 
 			@deleteItem="deleteTodo" 
 			@completedItem="completedTodo" />
 	</div>

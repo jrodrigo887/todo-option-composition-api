@@ -13,7 +13,7 @@ import TodoComposition from '../components/TodoComposition.vue';
 	});
 
 	const inputText = ref<HTMLInputElement | null>(null)
-
+	
   	function addTodo() {
 		const data: Todo = {
 			id: state.count++,
@@ -52,7 +52,6 @@ import TodoComposition from '../components/TodoComposition.vue';
 				placeholder="O que vai fazer?"/>
 		</div>
 		<TodoComposition :itemList="state.todoList" 
-			:delete="deleteTodo" 
 			@deleteItem="deleteTodo" 
 			@completedItem="completedTodo" />
 	</div>

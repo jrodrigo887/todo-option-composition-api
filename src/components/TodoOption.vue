@@ -5,7 +5,8 @@ export default {
         itemList: {
             type: Array,
             require: true
-        }
+        },
+       
     },
     emits: ['deleteItem', 'completedItem'],
     computed: {
@@ -15,9 +16,6 @@ export default {
             return  newArray.reverse();
            
         }
-    },
-    watch: {
-        // verificar se existe um item igual
     }
 }
 </script>
